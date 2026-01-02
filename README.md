@@ -5,5 +5,6 @@ Halaman Entry
 Halaman Home(setelah submit)
 <img width="2560" height="1600" alt="image" src="https://github.com/user-attachments/assets/11abe32c-e325-4b01-a24d-a78cacce025c" />
 Database
-<img width="2560" height="1600" alt="image" src="https://github.com/user-attachments/assets/5a5bb1d2-fb06-4ded-b4df-a6e8a9ddce8c" />
+<img width="2560" height="1472" alt="Screenshot 2026-01-02 221650" src="https://github.com/user-attachments/assets/61902f95-ce5b-4440-8324-f76e5aa8058c" />
+
 
