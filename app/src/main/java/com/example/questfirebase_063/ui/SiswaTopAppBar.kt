@@ -1,4 +1,4 @@
-package com.example.questfirebase_063.ui.theme
+package com.example.questfirebase_063.ui
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
