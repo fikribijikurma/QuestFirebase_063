@@ -9,6 +9,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.questfirebase_063.model.DetailSiswa
 import com.example.questfirebase_063.model.UIStateSiswa
 import com.example.questfirebase_063.model.toDataSiswa
+import com.example.questfirebase_063.model.toUiStateSiswa
 import com.example.questfirebase_063.repository.RepositorySiswa
 import com.example.questfirebase_063.ui.theme.route.DestinasiDetail
 import kotlinx.coroutines.launch
