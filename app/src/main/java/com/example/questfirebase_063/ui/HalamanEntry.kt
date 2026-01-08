@@ -26,7 +26,8 @@ import com.example.questfirebase_063.model.DetailSiswa
 import com.example.questfirebase_063.model.UIStateSiswa
 import com.example.questfirebase_063.ui.theme.route.DestinasiEntry
 import com.example.questfirebase_063.viewmodel.Entryviewmodel
-import com.example.questfirebase_063.viewmodel.provider.Penyediaviewmodel
+import com.example.questfirebase_063.viewmodel.provider.PenyediaViewModel
+
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -34,7 +35,8 @@ import kotlinx.coroutines.launch
 fun EntrySiswaScreen(
     navigateBack:() -> Unit,
     modifier: Modifier = Modifier,
-    viewModel: Entryviewmodel = viewModel(factory = Penyediaviewmodel .Factory)
+    viewModel: Entryviewmodel = viewModel(factory = PenyediaViewModel
+        .Factory)
 ){
     val coroutineScope = rememberCoroutineScope()
     val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
@@ -55,7 +57,7 @@ fun EntrySiswaScreen(
             onSaveClick = {
                 coroutineScope.launch {
                     viewModel.addSiswa()
-                    navigateBack
+                    navigateBack()
                 }
             },
             modifier= Modifier
