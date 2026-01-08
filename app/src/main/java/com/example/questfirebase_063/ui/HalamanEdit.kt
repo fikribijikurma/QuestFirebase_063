@@ -33,3 +33,19 @@ fun DetailScreen(
                 )
             }
         },
+        modifier = modifier
+    ) { innerPadding ->
+        ItemDetailContainer(
+            statusUIDetail = uiState,
+            modifier = Modifier
+                .padding(innerPadding)
+                .fillMaxSize(),
+            onDelete = {
+                viewModel.viewModelScope.launch {
+                    viewModel.hapusSatuSiswa()
+                    navigateBack()
+                }
+            }
+        )
+    }
+}
