@@ -42,7 +42,7 @@ import com.example.questfirebase_063.model.Siswa
 import com.example.questfirebase_063.ui.theme.route.DestinasiHome
 import com.example.questfirebase_063.viewmodel.Homeviewmodel
 import com.example.questfirebase_063.viewmodel.StatusUiSiswa
-import com.example.questfirebase_063.viewmodel.provider.Penyediaviewmodel
+import com.example.questfirebase_063.viewmodel.provider.PenyediaViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -50,13 +50,13 @@ fun HomeScreen(
     navigateToItemEntry: () -> Unit,
     modifier: Modifier = Modifier,
     onDetailClick: (Long) -> Unit,
-    viewModel: HomeViewModel = viewModel(factory = PenyediaViewModel.Factory)
+    viewModel: Homeviewmodel = viewModel(factory = PenyediaViewModel.Factory)
 ) {
     val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
     Scaffold(
         modifier = modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
-            SiswaTopAppBar(
+            SiswaTopBar(
                 title = stringResource(DestinasiHome.titleRes),
                 canNavigateBack = false,
                 scrollBehavior = scrollBehavior
@@ -132,10 +132,10 @@ fun OnError(modifier: Modifier = Modifier) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
-            painter = painterResource(id = R.drawable.ic_connection_error),
+            painter = painterResource(id = R.drawable.loading_img),
             contentDescription = ""
         )
-        Text(text = stringResource(R.string.loading_failed), modifier = Modifier.padding(16.dp))
+        Text(text = stringResource(R.string.loading), modifier = Modifier.padding(16.dp))
     }
 }
 
@@ -186,7 +186,7 @@ fun SiswaCard(
                     contentDescription = null
                 )
                 Text(
-                    text = siswa.kelas,
+                    text = siswa.telpon,
                     style = MaterialTheme.typography.titleMedium
                 )
             }
